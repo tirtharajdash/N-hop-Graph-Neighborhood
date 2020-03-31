@@ -1,4 +1,6 @@
-## N-hop-Graph-Neighborhood
+## N-hop Graph Neighborhood Computation
+
+### Information
 
 **Problem** 
 
@@ -6,4 +8,25 @@ Given a Graph, *G = (V,E)* (directed or undirected), compute the N-hop neighborh
 
 **Approach**
 
-Nothing magical. Straight-forward exhaustive computation. No attempt is made to make it paralle. However, it is easy to make the 
+Nothing magical. Straight-forward exhaustive computation. No attempt is made to make it parallel. However, it is easy to make the program parallel by using MATLAB's already available parallelisation toolbox and *parfor* loops (carefully do this!).
+
+**Inputs**
+
+***Adjacency list file***
+
+A text file containing the *adjacency list* representation of the graph *G*. Each row in the file contains the following information
+
+*(v_i, v_j, dist(v_i,v_j))*
+
+where, *v_{i,j}* are vertices from the set *V*, *dist(v_i,v_j)* is the distance between the two vertices. Ideally, the input contains the 1-distanced edges. So, the last column of the file is always 1. One may think that this is not very necessary. But, for the usage of this was there in my work that uses this neighborhood computation function and therefore, I have kept it. 
+
+Further, one may also input an *adjacency matrix* of *G*. But, this has to be then taken care in the program itself. Just simple nested for-loop type code within the function will do the job. I leave it to anyone who uses my program.
+
+Also note that: My program considers the graph is **undirected**. If if the adjacency list contains the edges (1,2,1), that should mean that (2,1,1) is also TRUE. If you are going to use this program for a directed graph, change the line of the program that is **commented** saying "disable/comment out this statement if your input graph is directed".
+
+***Neighborhood size (N) in N-hop***
+
+This is a positive integer. There is nothign called a 0-hop neighborhood -- this is taken care in the program.
+
+
+### Examples
