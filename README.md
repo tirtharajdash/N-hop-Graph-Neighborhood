@@ -10,7 +10,7 @@ Given a Graph, *G = (V,E)* (directed or undirected), compute the N-hop neighborh
 
 Nothing magical. Straight-forward exhaustive computation. No attempt is made to make it parallel. However, it is easy to make the program parallel by using MATLAB's already available parallelisation toolbox and *parfor* loops (carefully do this!).
 
-**Inputs**
+### Inputs 
 
 ***Adjacency list file***
 
@@ -22,7 +22,7 @@ where, *v_{i,j}* are vertices from the set *V*, *dist(v_i,v_j)* is the distance 
 
 Further, one may also input an *adjacency matrix* of *G*. But, this has to be then taken care in the program itself. Just simple nested for-loop type code within the function will do the job. I leave it to anyone who uses my program.
 
-Also note that: My program considers the graph is **undirected**. If if the adjacency list contains the edges (1,2,1), that should mean that (2,1,1) is also TRUE. If you are going to use this program for a directed graph, change the line of the program that is **commented** saying "disable/comment out this statement if your input graph is directed".
+Also note that: My program considers the graph is **undirected**. If if the adjacency list contains the edges (1,2,1), that should mean that (2,1,1) is also TRUE. If you are going to use this program for a directed graph, change the line of the program that is **commented** saying *%comment out this statement if your input graph is directed*.
 
 ***Neighborhood size (N) in N-hop***
 
@@ -30,3 +30,12 @@ This is a positive integer. There is nothign called a 0-hop neighborhood -- this
 
 
 ### Examples
+
+**Example 1**
+
+A linear graph, 1 - 2 - 3 - ... - 9 - 10. The input is given in the file input10.dat. Here are the results
+
+*N*     *time (s)*
+1
+2
+3
