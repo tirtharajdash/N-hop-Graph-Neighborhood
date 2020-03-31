@@ -33,9 +33,8 @@ This is a positive integer. There is nothign called a 0-hop neighborhood -- this
 
 **Example 1**
 
-A linear graph, 1 - 2 - 3 - ... - 9 - 10. The input is given in the file input10.dat. Here are the results
+A linear graph with 10 vertices, 1 - 2 - 3 - ... - 9 - 10. The input is given in the file input10.dat. The neighborhood computation for **all** the nodes in the graph takes only a few seconds.
 
-*N*     *time (s)*
-1
-2
-3
+**Example 2**
+
+A complex graph with 5000 vertices. The input file for this graph is given in input5000.dat. The neighborhood computation for this graph are (N=1, T=3.5s), (N=2, T=407s) on a machine with Quad-Core Intel Core i5 (each processor core with 2.5GHz) with 4GB RAM.
