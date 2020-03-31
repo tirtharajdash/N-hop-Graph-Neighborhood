@@ -38,3 +38,8 @@ A linear graph with 10 vertices, 1 - 2 - 3 - ... - 9 - 10. The input is given in
 **Example 2**
 
 A complex graph with 5000 vertices. The input file for this graph is given in input5000.dat. The neighborhood computation for this graph are (N=1, T=3.5s), (N=2, T=407s) on a machine with Quad-Core Intel Core i5 (each processor core with 2.5GHz) with 4GB RAM.
+
+
+### Display
+
+Call the function displayNeighbors(|V|,Nbd); where, |V| is the size of the graph, and *Nbd* contains the neighborhood set of all the nodes in the graph. 
