@@ -42,4 +42,11 @@ A complex graph with 5000 vertices. The input file for this graph is given in in
 
 ### Display
 
-Call the function displayNeighbors(|V|,Nbd); where, |V| is the size of the graph, and *Nbd* contains the neighborhood set of all the nodes in the graph. 
+Call the function *displayNeighbors(|V|,Nbd)*; where, |V| is the size of the graph, and *Nbd* contains the neighborhood set of all the nodes in the graph.
+
+
+### How to run from Linux Shell
+
+matlab -nodisplay -nojvm -r "Nbd = createNeighborsFromGraph('input10.dat',3); displayNeighbors(10,Nbd); exit;"
+
+(I didn't call this program with input5000.dat and N=3, given the quadratic computational complexity.)

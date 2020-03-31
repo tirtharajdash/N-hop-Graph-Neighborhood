@@ -19,8 +19,6 @@ if nbdsize < 1
     return
 end
 
-tic; %start the timer
-
 %create a base case of the recursion (nbdsize=1)
 if nbdsize == 1
     for i=1:N
@@ -33,8 +31,8 @@ if nbdsize == 1
     end
 else
     %create a recursion for higher neighborhood formation
-    nbd = createNeighborsFromClauseDist(filename,nbdsize-1);
-    nbd1 = createNeighborsFromClauseDist(filename,1);
+    nbd = createNeighborsFromGraph(filename,nbdsize-1);
+    nbd1 = createNeighborsFromGraph(filename,1);
     temp_nbd = nbd;
     for i=1:N
         for j=1:length(nbd{i})
@@ -44,9 +42,6 @@ else
     end
     nbd = temp_nbd;
 end
-
-et = toc; %stop the timer
-fprintf('Time taken to compute the neighborhood: %f sec\n',et);
 
 %print neighbors
 %displayNeighbors(N,nbd)
